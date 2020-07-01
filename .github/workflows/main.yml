@@ -1,24 +1,22 @@
 name: CI
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 jobs:
   tagged-release:
-    name: 'Tagged Release'
+    name: "Tagged Release"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2.3.1
       - uses: actions/setup-node@v1
-        with:
-          node-version: 12
+      - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: npm publish
       - uses: marvinpinto/action-automatic-releases@latest
         with:
-          repo_token: '${{ secrets.GITHUB_TOKEN }}'
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
           files: |
             *.json
