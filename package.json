@@ -1,9 +1,8 @@
 {
-    "name": "@you-got-bud/prettier-config",
-    "description": "You Got Bud prettier configuration",
-    "version": "1.0.0",
-    "author": "Brett Mandler <brettmandler@gmail.com>",
-    "license": "MIT",
-    "main": "index.json",
-    "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+  "name": "@you-got-bud/prettier-config",
+  "description": "Prettier configuration",
+  "version": "1.0.1",
+  "author": "Brett Mandler <brettmandler@gmail.com>",
+  "license": "MIT",
+  "main": "index.json"
 }
